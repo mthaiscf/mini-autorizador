@@ -147,10 +147,3 @@ Desafios (não obrigatórios):
  * como garantir que 2 transações disparadas ao mesmo tempo não causem problemas relacionados à concorrência?
 Exemplo: dado que um cartão possua R$10.00 de saldo. Se fizermos 2 transações de R$10.00 ao mesmo tempo, em instâncias diferentes da aplicação, como o sistema deverá se comportar?
 
-
--- to do :
-verificar db
-transações simultâneas
-suite de testes
-cobertura de testes
-Autenticação: BASIC, com login = username e senha = password

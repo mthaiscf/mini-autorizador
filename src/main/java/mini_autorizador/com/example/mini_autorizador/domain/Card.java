@@ -13,7 +13,9 @@ public class Card {
 
     private BigDecimal saldo;
 
-    // Construtor padrão (necessário para o JPA)
+    @Version
+    private Long version; // campo de versão
+
     public Card() {}
 
     public Card(String numeroCartao, String senha, BigDecimal saldo) {
@@ -22,7 +24,6 @@ public class Card {
         this.saldo = saldo;
     }
 
-    // Getters e Setters
     public String getNumeroCartao() {
         return numeroCartao;
     }
@@ -47,7 +48,6 @@ public class Card {
         this.saldo = saldo;
     }
 
-    // Método para debitar saldo
     public void debitarSaldo(BigDecimal valor) {
         this.saldo = this.saldo.subtract(valor);
     }

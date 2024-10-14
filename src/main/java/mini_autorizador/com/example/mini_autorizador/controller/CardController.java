@@ -27,6 +27,8 @@ public class CardController {
     public ResponseEntity<CardDTO> createCard(@RequestBody CardDTO cardDTO) {
         Card card = cardService.createCard(cardDTO.getNumeroCartao(), cardDTO.getSenha());
         return new ResponseEntity<>(new CardDTO(card), HttpStatus.CREATED);
+
+        
     }
 
     @GetMapping("/{numeroCartao}")
